@@ -38,14 +38,14 @@ tags:
 
 1. 阿里云镜像
 
-```cmd
+```bash
 nvm npm_mirror https://npmmirror.com/mirrors/npm/ 
 nvm node_mirror https://npmmirror.com/mirrors/node/
 ```
 
 2. 腾讯云镜像 
 
-```cmd
+```bash
 nvm npm_mirror http://mirrors.cloud.tencent.com/npm/ 
 nvm node_mirror http://mirrors.cloud.tencent.com/nodejs-release/
 ```
@@ -54,11 +54,11 @@ nvm node_mirror http://mirrors.cloud.tencent.com/nodejs-release/
 
 1. 显示可下载版本的部分列表，结果显示如下
 
-```cmd
+```bash
 nvm list available
 ```
 
-```cmd
+```bash
 # 结果显示如下
 |   CURRENT    |     LTS      |  OLD STABLE  | OLD UNSTABLE |
 |--------------|--------------|--------------|--------------|
@@ -88,7 +88,7 @@ This is a partial list. For a complete list, visit https://nodejs.org/en/downloa
 
 2. 安装最新版本、指定版本
 
-```cmd
+```bash
 # 安装最新版本，一般不建议安装最新版本
 nvm install latest
 
@@ -96,7 +96,7 @@ nvm install latest
 nvm install 20.16.0
 ```
 
-```cmd
+```bash
 # 结果显示如下
 Downloading node.js version 20.16.0 (64-bit)...
 Extracting node and npm...
@@ -116,7 +116,7 @@ nvm list
 nvm ls
 ```
 
-```cmd
+```bash
 # 结果显示如下
 * 20.17.0 (Currently using 64-bit executable)
   20.16.0
@@ -126,14 +126,14 @@ nvm ls
 
 4. 使用或切换到指定版本
 
-```cmd
+```bash
 # 切换指定版本，例如切换到 20.16.0 版本
 nvm use 20.16.0
 ```
 
 5. 检查是否成功，返回相关版本号则代表正常
 
-```cmd
+```bash
 # 查看 node 版本号
 node -v
 
@@ -153,7 +153,7 @@ npm -v
 
 由于国内访问`npm`源比较慢，故此采用`cnpm`，配置命令如下
 
-```cmd
+```bash
 npm install -g cnpm --registry=https://registry.npmmirror.com
 ```
 
@@ -165,7 +165,7 @@ npm install -g cnpm --registry=https://registry.npmmirror.com
 
 如果只是想使用默认的`npm`命令行工具，也可通过如下设置
 
-```cmd
+```bash
 npm config set registry https://registry.npmmirror.com
 ```
 
@@ -173,7 +173,7 @@ npm config set registry https://registry.npmmirror.com
 
 1. 两种命令行安装方式
 
-```cmd
+```bash
 #利用cnpm安装模块命令
 cnpm install hexo-cli -g
 
@@ -183,7 +183,7 @@ npm install hexo-cli -g
 
 2. 按下`Win + R`输入`cmd`进入控制台创建并初始化博客文件根目录
 
-```cmd
+```bash
 #切换到D盘
 D:
 
@@ -194,7 +194,7 @@ mkdir Blogs
 hexo init Blogs
 ```
 
-```cmd
+```bash
 # 初始化完成结果如下所示
 INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git
 INFO  Install dependencies
@@ -203,7 +203,7 @@ INFO  Start blogging with Hexo!
 
 3. 更新相关依赖
 
-```cmd
+```bash
 # 进入 Blogs 文件夹
 cd Blogs
 
@@ -214,7 +214,7 @@ cnpm install
 dir
 ```
 
-```cmd
+```bash
 #项目文件夹结构如下所示
 .
 ├── _config.yml
@@ -228,7 +228,7 @@ dir
 
 3. 输入以下命令清除缓存并生成静态文件后，启动服务器
 
-```cmd
+```bash
 hexo clean &&　hexo generate && hexo server
 ```
 
