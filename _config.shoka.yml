@@ -1,4 +1,4 @@
-alternate: Yume Shoka
+alternate: Artorias's Life
 
 # Whether to show the loading cat
 loader:
@@ -7,12 +7,12 @@ loader:
 
 menu:
   home: / || home
-  # about: /about/ || user
-  # posts:
-  #   default: / || feather
-  #   archives: /archives/ || list-alt
-  #   categories: /categories/ || th
-  #   tags: /tags/ || tags
+  posts:
+    default: / || feather
+    archives: /archives/ || list-alt
+    categories: /categories/ || th
+    tags: /tags/ || tags
+  about: /about/ || user
   # friends: /friends/ || heart
   # links: /links/ || magic
   
@@ -22,19 +22,19 @@ menu:
 # Value before `||` delimiter is the target permalink,
 # secend value is the name of Font icon.
 social:
-  #github: https://github.com/yourname || github || "#191717"
+  github: https://github.com/ArtoriasLife || github || "#191717"
   #google: https://plus.google.com/yourname || google
   #twitter: https://twitter.com/yourname || twitter || "#00aff0"
   #zhihu: https://www.zhihu.com/people/yourname || zhihu || "#1e88e5"
-  #music: https://music.163.com/#/user/home?id=yourid || cloud-music || "#e60026"
+  music: https://music.163.com/#/user/home?id=yourid || cloud-music || "#e60026"
   #weibo: https://weibo.com/yourname || weibo || "#ea716e"
-  #about: https://about.me/yourname || address-card || "#3b5998"
-  #email: mailto:yourname@mail.com || envelope || "#55acd5"
-  #facebook: https://www.facebook.com/yourname || facebook
-  #stackoverflow: https://stackoverflow.com/yourname || stack-overflow
-  #youtube: https://youtube.com/yourname || youtube
-  #instagram: https://instagram.com/yourname || instagram
-  #skype: skype:yourname?call|chat || skype
+  about: https://about.me/yourname || address-card || "#3b5998"
+  email: mailto:yourname@mail.com || envelope || "#55acd5"
+  facebook: https://www.facebook.com/yourname || facebook
+  stackoverflow: https://stackoverflow.com/yourname || stack-overflow
+  youtube: https://youtube.com/yourname || youtube
+  instagram: https://instagram.com/yourname || instagram
+  skype: skype:yourname?call|chat || skype
   #douban: https://www.douban.com/people/yourname/ || douban
   
 footer:
@@ -89,10 +89,10 @@ valine:
 
 # bgm
 audio:
-  # - title: 列表1
-  #   list:
-  #    - https://music.163.com/#/playlist?id=2943811283
-  #    - https://music.163.com/#/playlist?id=2297706586
+  - title: Silence
+    list:
+     - https://music.163.com/#/playlist?id=5382015259
+     - https://music.163.com/#/playlist?id=5302425773
   # - title: 列表2
   #   list:
   #    - https://music.163.com/#/playlist?id=2031842656
