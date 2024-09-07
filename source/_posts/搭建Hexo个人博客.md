@@ -1,10 +1,12 @@
 ---
 title: 搭建Hexo个人博客
 date: 2024-09-03 14:54:56
+update: 2024/09/7
 categories:
 - [Life,blogs,Hexo]
 tags:
-- blogs,Hexo
+- blogs
+- Hexo
 ---
 
 本篇文章主要介绍用`nvm`管理工具来搭建`Hexo`博客框架的操作流程

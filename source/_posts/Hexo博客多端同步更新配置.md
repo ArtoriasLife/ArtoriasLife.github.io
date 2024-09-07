@@ -4,7 +4,8 @@ date: 2024-09-03 15:59:57
 categories:
 - [Life,blogs,Hexo]
 tags:
-- blogs,Hexo
+- blogs
+- Hexo
 ---
 本篇文章主要介绍如何在不同设备端利用git来实现博客同步更新
 

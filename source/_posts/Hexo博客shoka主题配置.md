@@ -4,7 +4,8 @@ date: 2024-09-03 15:46:28
 categories:
 - [Life,blogs,Hexo]
 tags:
-- blogs,Hexo
+- blogs
+- Hexo
 ---
 本篇文章主要介绍Hexo博客下的shoka主题基本配置
 其他详细教程请参考[Theme Shoka Documentation](https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/)
