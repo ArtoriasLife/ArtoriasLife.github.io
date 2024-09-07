@@ -1,7 +1,10 @@
 ---
 title: 搭建Hexo个人博客
 date: 2024-09-03 14:54:56
+categories:
+- [Life,blogs,Hexo]
 tags:
+- blogs,Hexo
 ---
 
 本篇文章主要介绍用`nvm`管理工具来搭建`Hexo`博客框架的操作流程
@@ -26,7 +29,7 @@ tags:
 
 3. 按下`Win + R`输入`cmd`，再输入`nvm`命令，返回结果会显示`Running version 1.1.12.`等命令说明，安装成功后，下面继续安装`node.js`
 
-##　Node.js环境
+## Node.js环境
 
 > Node.js® 是一个免费、开源、跨平台的 JavaScript 运行时环境，它让开发人员能够创建服务器、Web 应用、命令行工具和脚本
 
@@ -86,7 +89,7 @@ nvm list available
 This is a partial list. For a complete list, visit https://nodejs.org/en/download/releases
 ```
 
-2. 安装最新版本、指定版本
+2. 根据选择安装最新或指定版本
 
 ```bash
 # 安装最新版本，一般不建议安装最新版本
@@ -111,7 +114,7 @@ nvm use 20.16.0
 
 3. 查看目前已经安装的版本
 
-```
+```bash
 nvm list
 nvm ls
 ```
@@ -122,7 +125,7 @@ nvm ls
   20.16.0
 ```
 
-笔者前面已经安装过相关版本，在启用的 node 版本前面有 `*`标记
+笔者前面已经安装过相关版本，在使用的 node 版本前面有 `*`标记
 
 4. 使用或切换到指定版本
 
@@ -143,11 +146,11 @@ npm -v
 
 ## 安装Git
 
-访问**[64-bit Git for Windows Setup](https://github.com/git-for-windows/git/releases/download/v2.46.0.windows.1/Git-2.46.0-64-bit.exe).**进行下载就行，安装目录自行选择，之后一直选择`next`就行
+访问[64-bit Git for Windows Setup](https://github.com/git-for-windows/git/releases/download/v2.46.0.windows.1/Git-2.46.0-64-bit.exe).进行下载后安装，安装目录自行选择，之后一直选择`next`就行
 
 详细安装流程可参考[Git 详细安装教程-CSDN博客](https://blog.csdn.net/mukes/article/details/115693833)
 
-##　Hexo博客框架
+## Hexo博客框架
 
 ### 采用 cnpm 替代默认的 npm
 
@@ -163,7 +166,7 @@ npm install -g cnpm --registry=https://registry.npmmirror.com
 
   - 同步模块`cnpm sync cnpmcore`
 
-如果只是想使用默认的`npm`命令行工具，也可通过如下设置
+如果只是想使用默认的`npm`命令行工具，也可通过如下设置国内镜像
 
 ```bash
 npm config set registry https://registry.npmmirror.com
@@ -181,7 +184,7 @@ cnpm install hexo-cli -g
 npm install hexo-cli -g
 ```
 
-2. 按下`Win + R`输入`cmd`进入控制台创建并初始化博客文件根目录
+2. 按下`Win + R`输入`cmd`进入控制台后，创建并初始化博客文件根目录
 
 ```bash
 #切换到D盘
@@ -226,10 +229,10 @@ dir
 └── themes
 ```
 
-3. 输入以下命令清除缓存并生成静态文件后，启动服务器
+3. 输入以下命令清除缓存并生成静态文件后，启动本地服务
 
 ```bash
 hexo clean &&　hexo generate && hexo server
 ```
 
-4. 访问博客，默认情况下，访问网址为： `http://localhost:4000/`
+4. 访问博客网站，默认情况下，访问网址为： `http://localhost:4000/`

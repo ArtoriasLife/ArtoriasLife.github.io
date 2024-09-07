@@ -69,8 +69,21 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  计算机科学: CS
+  Java: Java
+  C++: cpp
+  C: c
+  Python: Python
+  英语: English
+  俄语: Russian
+  粤语: Cantonese
+  日语: Japanese
+  blogs: blogs
+  Hexo: Hexo
+  Life: life
 tag_map:
-
+  blogs: blogs
+  Hexo: Hexo
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
@@ -103,9 +116,12 @@ theme: shoka
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: git@github.com:ArtoriasLife/ArtoriasLife.github.io.git
-  branch: main
+   type: git
+   repo: git@github.com:ArtoriasLife/ArtoriasLife.github.io.git
+   branch: main
+   #repository:
+    # github: git@github.com:ArtoriasLife/ArtoriasLife.github.io.git,main
+     #server: git@124.71.71.7:/home/git/Hexoblog.git,main
   
 markdown:
   render: # 渲染器设置

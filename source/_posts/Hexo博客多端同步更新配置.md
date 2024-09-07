@@ -1,7 +1,10 @@
 ---
 title: Hexo博客多端同步更新配置
 date: 2024-09-03 15:59:57
+categories:
+- [Life,blogs,Hexo]
 tags:
+- blogs,Hexo
 ---
 本篇文章主要介绍如何在不同设备端利用git来实现博客同步更新
 
@@ -20,7 +23,7 @@ tags:
 
 deploy:
   type: git
-  repo: git@github.com:ArtoriasLife/ArtoriasLife.github.io.git
+  repo: git@github.com:username/username.github.io.git
   branch: main
 ```
 
@@ -30,4 +33,6 @@ deploy:
 
 git config --global http.proxy 'socks5://127.0.0.1:4781'
 git config --global https.proxy 'socks5://127.0.0.1:4781'
+
+设置Github上的默认分支
 
