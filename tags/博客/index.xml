@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on Artorias&#39;s Life</title>
+    <link>http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content from Artorias&#39;s Life</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    
+    <managingEditor>qw1011644697@gmail.com (Artorias)</managingEditor>
+    <webMaster>qw1011644697@gmail.com (Artorias)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Thu, 17 Jul 2025 16:40:37 +0800</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>基于Hugo搭建个人Blog</title>
+      <link>http://localhost:1313/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog/</link>
+      <pubDate>Thu, 17 Jul 2025 16:40:37 &#43;0800</pubDate>
+      <author>qw1011644697@gmail.com (Artorias)</author>
+      <guid>http://localhost:1313/post/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog/</guid>
+      <description>
+        <![CDATA[<h1>基于Hugo搭建个人Blog</h1><p>作者：Artorias（qw1011644697@gmail.com）</p>
+        
+          <h1 id="基于hugo博客系统搭建个人blog系统">
+<a class="header-anchor" href="#%e5%9f%ba%e4%ba%8ehugo%e5%8d%9a%e5%ae%a2%e7%b3%bb%e7%bb%9f%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%bablog%e7%b3%bb%e7%bb%9f"></a>
+基于Hugo博客系统搭建个人Blog系统
+</h1>
+        
+        <hr><p>本文2025-07-17首发于<a href='http://localhost:1313/'>Artorias's Life</a>，最后修改于2025-07-17</p>]]>
+      </description>
+      
+        <category>Hugo</category>
+      
+    </item>
+    
+  </channel>
+</rss>
