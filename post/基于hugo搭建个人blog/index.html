@@ -145,13 +145,20 @@
   <div class="sidebar-toc-wrapper toc-div-class">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一hugo搭建">一、Hugo搭建</a>
+    <li><a href="#一本地搭建">一、本地搭建</a>
       <ul>
         <li><a href="#安装hugo">安装Hugo</a></li>
         <li><a href="#创建hugo站点">创建Hugo站点</a></li>
       </ul>
     </li>
-    <li><a href="#二服务器部署">二、服务器部署</a>
+    <li><a href="#二github-pages部署">二、GitHub Pages部署</a>
+      <ul>
+        <li><a href="#新建仓库">新建仓库</a></li>
+        <li><a href="#文件配置">文件配置</a></li>
+        <li><a href="#每次更新静态文件后操作">每次更新静态文件后操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#三服务器部署">三、服务器部署</a>
       <ul>
         <li><a href="#nginx-安装配置">Nginx 安装、配置</a></li>
         <li><a href="#启用hugo站点">启用Hugo站点</a></li>
@@ -298,24 +305,24 @@
       >HUGO</a
     ></div>
 </div>
-    <div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="基于hugo搭建个人blog系统">
-<a class="header-anchor" href="#%e5%9f%ba%e4%ba%8ehugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%bablog%e7%b3%bb%e7%bb%9f"></a>
-基于Hugo搭建个人Blog系统
+    <div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="基于hugo搭建个人blog">
+<a class="header-anchor" href="#%e5%9f%ba%e4%ba%8ehugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%bablog"></a>
+基于Hugo搭建个人Blog
 </h1><blockquote>
-<p>本文为记录博主在Ubuntu系统服务器上搭建Hugo博客系统的过程</p></blockquote>
-<p>生产环境</p>
+<p>本文为记录博主搭建Hugo博客系统的过程</p></blockquote>
+<p>本文涉及的生产环境概览</p>
 <ul>
+<li><code>Hugo</code></li>
 <li><code>Ubuntu</code></li>
 <li><code>Nginx</code></li>
-<li><code>Hugo</code></li>
 </ul>
-<h2 id="一hugo搭建">
-<a class="header-anchor" href="#%e4%b8%80hugo%e6%90%ad%e5%bb%ba"></a>
-一、Hugo搭建
+<h2 id="一本地搭建">
+<a class="header-anchor" href="#%e4%b8%80%e6%9c%ac%e5%9c%b0%e6%90%ad%e5%bb%ba"></a>
+一、本地搭建
 </h2><h3 id="安装hugo">
 <a class="header-anchor" href="#%e5%ae%89%e8%a3%85hugo"></a>
 安装Hugo
-</h3><p><code>Ubuntu</code>系统使用官方<code>.deb</code>包安装</p>
+</h3><p><code>Ubuntu</code>系统使用官方<code>.deb</code>包安装（按照本地系统所指定的安装包进行安装即可）</p>
 <ol>
 <li>在<a href="https://github.com/gohugoio/hugo/releases">Hugo官网</a>下载(<code>命令下载</code>或手动下载<code>上传安装包</code>)后缀为<code>.deb</code>的<code>hugo_extended</code>的版本(例如<code>hugo_extended_0.148.1_linux-amd64.deb</code>)到你指定的目录（例如<code>/opt</code>）</li>
 <li>进入安装包的目录进行安装</li>
@@ -328,40 +335,60 @@
 </h3><blockquote>
 <p>Hugo主题配置请参考相关主题所提供的教程</p></blockquote>
 <ol>
-<li>创建Hugo站点</li>
-</ol>
+<li>
+<p>创建Hugo站点</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site mysite
 </span></span><span class="line"><span class="cl"><span class="nb">cd</span> mysite
-</span></span></code></pre></div><ol start="2">
-<li>创建<code>posts</code>目录下<code>my-first-post</code>文章，并启动本地服务，用浏览器访问<code>http://localhost:1313</code>网址查看测试结果</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>创建<code>posts</code>目录下<code>my-first-post</code>文章，并启动本地服务，然后用浏览器访问<code>http://localhost:1313</code>网址查看测试结果</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new posts/my-first-post.md
 </span></span><span class="line"><span class="cl">hugo server
-</span></span></code></pre></div><ol start="3">
-<li>生成静态文件，文件位于<code>mysite</code>的<code>public/</code> 文件夹下</li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>生成静态文件，静态文件位于<code>mysite</code>的<code>public/</code> 文件夹下</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
-</span></span></code></pre></div><h2 id="二服务器部署">
-<a class="header-anchor" href="#%e4%ba%8c%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%a8%e7%bd%b2"></a>
-二、服务器部署
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="二github-pages部署">
+<a class="header-anchor" href="#%e4%ba%8cgithub-pages%e9%83%a8%e7%bd%b2"></a>
+二、GitHub Pages部署
+</h2><h3 id="新建仓库">
+<a class="header-anchor" href="#%e6%96%b0%e5%bb%ba%e4%bb%93%e5%ba%93"></a>
+新建仓库
+</h3><h3 id="文件配置">
+<a class="header-anchor" href="#%e6%96%87%e4%bb%b6%e9%85%8d%e7%bd%ae"></a>
+文件配置
+</h3><h3 id="每次更新静态文件后操作">
+<a class="header-anchor" href="#%e6%af%8f%e6%ac%a1%e6%9b%b4%e6%96%b0%e9%9d%99%e6%80%81%e6%96%87%e4%bb%b6%e5%90%8e%e6%93%8d%e4%bd%9c"></a>
+每次更新静态文件后操作
+</h3><p>每次写完文章更新静态文件后，进入<code>public</code>文件夹下操作</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add -A
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;&lt;描述信息&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></div><h2 id="三服务器部署">
+<a class="header-anchor" href="#%e4%b8%89%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%83%a8%e7%bd%b2"></a>
+三、服务器部署
 </h2><p>主要是将生成的静态文件进行对外访问，这里采用<code>Nginx</code>进行网站配置</p>
 <h3 id="nginx-安装配置">
 <a class="header-anchor" href="#nginx-%e5%ae%89%e8%a3%85%e9%85%8d%e7%bd%ae"></a>
 Nginx 安装、配置
 </h3><ol>
-<li>安装、验证<code>Nginx</code></li>
-</ol>
+<li>
+<p>安装、验证<code>Nginx</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update
 </span></span><span class="line"><span class="cl">sudo apt install nginx -y
 </span></span><span class="line"><span class="cl">nginx -v
 </span></span><span class="line"><span class="cl">sudo nginx -t
-</span></span></code></pre></div><ol start="2">
-<li>启动<code>Nginx</code></li>
-</ol>
+</span></span></code></pre></div></li>
+<li>
+<p>启动<code>Nginx</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start nginx
 </span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> nginx
-</span></span></code></pre></div><ol start="3">
-<li>打开浏览器访问<code>http://服务器IP</code>,可以看到 <code>Nginx</code> 欢迎页</li>
+</span></span></code></pre></div></li>
+<li>
+<p>打开浏览器访问<code>http://服务器IP</code>,可以看到 <code>Nginx</code> 欢迎页</p>
+</li>
 </ol>
 <h3 id="启用hugo站点">
 <a class="header-anchor" href="#%e5%90%af%e7%94%a8hugo%e7%ab%99%e7%82%b9"></a>
@@ -455,7 +482,7 @@ Nginx 安装、配置
         >
       </div><div>
         <span class="icon-brush"
-          >&nbsp;804</span
+          >&nbsp;914</span
         >
         &nbsp;|&nbsp;
         <span class="icon-coffee">&nbsp;00:02</span>
@@ -485,13 +512,20 @@ Nginx 安装、配置
   <div class="sidebar-toc-wrapper toc-div-class">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一hugo搭建">一、Hugo搭建</a>
+    <li><a href="#一本地搭建">一、本地搭建</a>
       <ul>
         <li><a href="#安装hugo">安装Hugo</a></li>
         <li><a href="#创建hugo站点">创建Hugo站点</a></li>
       </ul>
     </li>
-    <li><a href="#二服务器部署">二、服务器部署</a>
+    <li><a href="#二github-pages部署">二、GitHub Pages部署</a>
+      <ul>
+        <li><a href="#新建仓库">新建仓库</a></li>
+        <li><a href="#文件配置">文件配置</a></li>
+        <li><a href="#每次更新静态文件后操作">每次更新静态文件后操作</a></li>
+      </ul>
+    </li>
+    <li><a href="#三服务器部署">三、服务器部署</a>
       <ul>
         <li><a href="#nginx-安装配置">Nginx 安装、配置</a></li>
         <li><a href="#启用hugo站点">启用Hugo站点</a></li>
@@ -675,7 +709,7 @@ Nginx 安装、配置
           author: "Andrésen",
           title: "基于Hugo搭建个人Blog",
           url: "https:\/\/ArtoriasLife.github.io\/post\/%E5%9F%BA%E4%BA%8Ehugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BAblog\/",
-          description: "\r基于Hugo搭建个人Blog系统\r本文为记录博主在Ubuntu系统服务器上搭建Hugo博客系统的过程\n生产环境\nUbuntu Nginx Hugo 一、Hugo搭建\r安装Hugo\rUbuntu系统使用官方.deb包安装\n",
+          description: "\r基于Hugo搭建个人Blog\r本文为记录博主搭建Hugo博客系统的过程\n本文涉及的生产环境概览\nHugo Ubuntu Nginx 一、本地搭建\r安装Hugo\rUbuntu系统使用官方.deb包安装（按照本地系统所指定的安装包进行安装即可）\n",
           cover: "https:\/\/ArtoriasLife.github.io\/images\/banner.png",
         };
       </script><script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const pswp = () => {

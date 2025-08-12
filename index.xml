@@ -30,24 +30,24 @@
       <description>
         <![CDATA[<h1>基于Hugo搭建个人Blog</h1><p>作者：Andrésen（qw1011644697@gmail.com）</p>
         
-          <h1 id="基于hugo搭建个人blog系统">
-<a class="header-anchor" href="#%e5%9f%ba%e4%ba%8ehugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%bablog%e7%b3%bb%e7%bb%9f"></a>
-基于Hugo搭建个人Blog系统
+          <h1 id="基于hugo搭建个人blog">
+<a class="header-anchor" href="#%e5%9f%ba%e4%ba%8ehugo%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%bablog"></a>
+基于Hugo搭建个人Blog
 </h1><blockquote>
-<p>本文为记录博主在Ubuntu系统服务器上搭建Hugo博客系统的过程</p></blockquote>
-<p>生产环境</p>
+<p>本文为记录博主搭建Hugo博客系统的过程</p></blockquote>
+<p>本文涉及的生产环境概览</p>
 <ul>
+<li><code>Hugo</code></li>
 <li><code>Ubuntu</code></li>
 <li><code>Nginx</code></li>
-<li><code>Hugo</code></li>
 </ul>
-<h2 id="一hugo搭建">
-<a class="header-anchor" href="#%e4%b8%80hugo%e6%90%ad%e5%bb%ba"></a>
-一、Hugo搭建
+<h2 id="一本地搭建">
+<a class="header-anchor" href="#%e4%b8%80%e6%9c%ac%e5%9c%b0%e6%90%ad%e5%bb%ba"></a>
+一、本地搭建
 </h2><h3 id="安装hugo">
 <a class="header-anchor" href="#%e5%ae%89%e8%a3%85hugo"></a>
 安装Hugo
-</h3><p><code>Ubuntu</code>系统使用官方<code>.deb</code>包安装</p>
+</h3><p><code>Ubuntu</code>系统使用官方<code>.deb</code>包安装（按照本地系统所指定的安装包进行安装即可）</p>
         
         <hr><p>本文2025-07-17首发于<a href='https://ArtoriasLife.github.io/'>Artorias's Life</a>，最后修改于2025-07-17</p>]]>
       </description>
